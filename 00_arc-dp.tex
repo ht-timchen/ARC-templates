@@ -1,0 +1,139 @@
+%! program = pdflatex
+
+\documentclass[12pt,a4paper]{article} 
+\usepackage{arc-dp}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{pgfgantt}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{subfig}
+\usepackage{pgfgantt}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+
+\usepackage{booktabs} % for spacing tables
+\usepackage{tabularx} % auto table sizing
+\usepackage{multirow} % table multirow
+
+%\usepackage{epsf}
+%\usepackage{fancyheadings}
+%\usepackage{subfigure}
+%\usepackage{pst-gantt}
+%\usepackage{tweaklist}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{1pt}
+  \setlength{\itemsep}{1pt plus 0.3ex}
+}
+
+
+%\renewcommand{\enumhook}{\setlength{\topsep}{0pt}%
+ % \setlength{\itemsep}{-2mm}}
+%\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{-2mm}}
+  %%%%%UNCOMMENT THE NEXT COMMAND IF NEEDED
+%\renewcommand{\descripthook}{\setlength{\topsep}{0pt}%
+%  \setlength{\itemsep}{-2mm}}
+
+%\pagestyle{fancy}
+
+%\input{psfig.sty}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\rules}[1]{\textcolor{blue}{#1}}
+\newcommand{\pset}{ {\rm P} \! \! \! {\rm P} }
+\date{}
+%\include{psfig}
+\remove{
+\topmargin -15mm
+\headheight 0pt
+\headsep 0pt
+\textheight 285mm
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\textwidth 190mm
+\columnsep 10mm
+\marginparwidth 0pt
+\marginparsep 0pt
+}
+
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\parindent=4mm
+\parskip=0.2mm
+
+%\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+
+%\linespread{1.5}
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{12}{12}%
+      \selectfont}
+
+\title{The Title of your ARC DP Proposal}
+%\author{}
+\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+\rmfamily
+\date{}
+
+
+\noindent \textbf{PROJECT TITLE: }\\ \noindent The Title of your ARC DP Proposal
+
+\input{10_aims and background.tex}
+\input{20_PI capability.tex}
+\input{30_project.tex}
+\input{40_benefit.tex}
+\input{50_feasibility.tex}
+\input{60_communication.tex}
+
+\section*{\TitleFont REFERENCES}
+
+% \section*{\TitleFont ACKNOWLEDGEMENTS (IF REQUIRED)}
+
+
+%\vspace{4pt}
+\renewcommand{\refname}{\normalfont\selectfont\TitleFont REFERENCES} 
+%\vspace{-14pt}
+\begingroup
+    \fontsize{10pt}{10pt}\selectfont
+\bibliographystyle{abbrv}
+\bibliography{references.bib}
+
+%\todo{\subsection*{Changes to be made}}
+%\todo{
+%\begin{enumerate}
+%\item bring clear aims, objectives and methods in the first page
+%\item clarify how the method is unique, why cannot be done by Google or others. Clarify why it leads to a solution
+%\item reduce the quantity of text
+%\item add images: 1. example of good query and results vs example of bad query and result; 2. study methodology/phases
+%\end{enumerate}}
+
+
+\endgroup
+
+
+\end{document}
+
+
